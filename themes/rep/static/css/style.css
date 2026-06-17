@@ -11,3 +11,33 @@ footer a, footer a:visited {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+/* Side-by-side chords and lyrics layout */
+.chords-lyrics-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.chords-col {
+    flex: 0 0 45%;
+    max-width: 520px;
+    min-width: 260px;
+}
+.chords-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.lyrics-col {
+    flex: 1 1 260px;
+    min-width: 260px;
+}
+.playlist-section {
+    max-width: 520px;
+}
+@media (max-width: 600px) {
+    .chords-lyrics-row {
+        flex-direction: column;
+    }
+}

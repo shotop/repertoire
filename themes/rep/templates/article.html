@@ -97,21 +97,23 @@
   {% endblock %}
 
   {% block content %}
-  <article class="f5 f4-ns lh-copy measure mb4">
+  <article class="f5 f4-ns lh-copy mb4">
+      <div class="chords-lyrics-row">
       {% if article.chords %}
-      <section>
+      <section class="chords-col">
         <h2 class="f2 bg-black-90 white sans-serif fw1">
           Chords
         </h2>
-        <p class="f6 f5-ns lh-copy measure i mb4">
+        <p class="f6 f5-ns lh-copy i mb4">
           <img src="{{ article.chords }}" alt="Chord chart for the jazz standard {{ article.title }}">
         </p>
       </section>
       {% endif %}
-          {{ article.content }}
+      <div class="lyrics-col">{{ article.content }}</div>
+      </div>
 
           {% if article.embed %}
-          <section>
+          <section class="playlist-section">
             <h2 class="f2 bg-black-90 white sans-serif fw1">
               Playlist
             </h2>
